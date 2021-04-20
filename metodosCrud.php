@@ -14,6 +14,13 @@
                 values ('$datos[0]','$datos[1]')";
             return $result= mysqli_query($conexion, $sql);
         }
+        public function borrarDatos($datos){
+            $con = new conectar();
+            $conexion =$con->conexion();
+            $sql = "DELETE into t_persona (nombre, apellido)
+            values ('$datos[0]','$datos[1]')";
+            return $result=mysqli_query($conexion,$sql);
+        }
     }
     
 ?>
